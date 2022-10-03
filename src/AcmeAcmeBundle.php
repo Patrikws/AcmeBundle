@@ -4,7 +4,7 @@ namespace Acme\AcmeBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AcmeBundle extends Bundle
+class AcmeAcmeBundle extends Bundle
 {
     public function getPath(): string
     {
