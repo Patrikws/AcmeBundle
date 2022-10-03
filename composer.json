@@ -1,0 +1,51 @@
+{
+    "name": "allekslar/acme-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Aleks",
+            "email": "websiteservise@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "symfony/config": "^5.4|^6.0",
+        "symfony/dependency-injection": "^5.4|^6.0",
+        "symfony/http-kernel": "^5.4|^6.0",
+        "symfony/phpunit-bridge": "^5.4|^6.0",
+        "phpunit/phpunit": "^9.5",
+        "symplify/easy-coding-standard": "^11.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\AcmeBundle\\": ""
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "all": [
+            "@unit-tests",
+            "@ecs"
+        ],
+        "cs": [
+            "vendor/bin/ecs check --ansi --no-interaction"
+        ],
+        "cs-fix": [
+            "vendor/bin/ecs check --fix --ansi --no-interaction"
+        ],
+        "ecs": "@php tools/ecs/vendor/bin/ecs check src tests --config ecs.php --fix --ansi",
+        "unit-tests": "@php vendor/bin/phpunit --colors=always"
+    }
+}
