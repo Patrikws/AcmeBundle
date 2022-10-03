@@ -8,7 +8,7 @@ class AcmeBundle extends Bundle
 {
     public function getPath(): string
     {
-        dd(\dirname(__DIR__));
+        // dd(\dirname(__DIR__));
         return \dirname(__DIR__);
     }
 }
