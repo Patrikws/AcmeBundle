@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <import resource="." type="extra"/>
+    <!-- <import resource="." type="advanced_extra"/> -->
+    <route id="ws.acme.users.index" controller="ws.acme.bundle.acme_controller::index" path="/acme" methods="GET" />
+    <!-- <route id="acme_number" controller="ws_acme_controller:number" path="/acme/number/{max}" >
+
+    </route> -->
+</routes>

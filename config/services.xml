@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <container xmlns="http://symfony.com/schema/dic/services"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-
     <services>
         <defaults public="false" />
-
         <service id="acme.service1" class="Ws\AcmeBundle\Service\Service1" />
+        <service id="acme.service2" class="Ws\AcmeBundle\Service\Service2" />
+        <!-- <service id="ws_acme.routing_loader" class="Ws\AcmeBundle\Service\AdvancedLoader">
+            <tag name="routing.loader" />
+        </service> -->
+        <service id="Ws\AcmeBundle\Service\ExtraLoader">
+            <tag name="routing.loader"/>
+        </service>
+        <!-- <service id="ws_acme_controller" class="Ws\AcmeBundle\Controller\AcmeController"  public="true">
+            <tag name="controller.service_arguments"/>
+            <tag name="container.service_subscriber"/>
+        </service> -->
     </services>
 </container>
