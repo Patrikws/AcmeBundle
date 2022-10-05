@@ -7,7 +7,7 @@ use Symfony\Component\Routing\RouteCollection;
 
 class AdvancedLoader extends Loader
 {
-    public function load($resource, $type = null)
+    public function load(mixed $resource, mixed $type = null): mixed
     {
         $collection = new RouteCollection();
 
@@ -21,7 +21,7 @@ class AdvancedLoader extends Loader
         return $collection;
     }
 
-    public function supports($resource, $type = null)
+    public function supports(mixed $resource, mixed $type = null): bool
     {
         return $type === 'advanced_extra';
     }

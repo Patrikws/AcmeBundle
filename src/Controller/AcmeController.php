@@ -6,6 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @psalm-suppress MissingConstructor
+ * @psalm-suppress PossiblyUndefinedMethod
+ */
 class AcmeController extends AbstractController
 {
     #[Route('/acme/number/{max}', name: 'acme_number')]

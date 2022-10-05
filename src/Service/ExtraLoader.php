@@ -8,9 +8,9 @@ use Symfony\Component\Routing\RouteCollection;
 
 class ExtraLoader extends Loader
 {
-    private $isLoaded = false;
+    private bool $isLoaded = false;
 
-    public function load($resource, string $type = null)
+    public function load(mixed $resource, string $type = null): mixed
     {
         if (true === $this->isLoaded) {
             throw new \RuntimeException('Do not add the "extra" loader twice');
@@ -37,7 +37,7 @@ class ExtraLoader extends Loader
         return $routes;
     }
 
-    public function supports($resource, string $type = null)
+    public function supports(mixed $resource, string $type = null): bool
     {
         return 'extra' === $type;
     }
