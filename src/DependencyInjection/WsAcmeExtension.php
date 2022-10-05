@@ -15,13 +15,6 @@ class WsAcmeExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
         $loader->load('services.xml');
-        // $loader_yaml = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
-        // $loader_yaml->load('services.yaml');
-        // $loader->load('routes.xml');
-
-        // $routes = new RouteCollection();
-        // $route = $loader->load('routes.xml');
-        // $routes->addCollection($route);
 
         $schema = new ConfigSchema();
 
